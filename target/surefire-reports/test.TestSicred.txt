@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: test.TestSicred
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.356 s <<< FAILURE! - in test.TestSicred
+test.TestSicred.t01_shouldGetUsers  Time elapsed: 2.171 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected response time was not a value less than <1000L> milliseconds, was 1003 milliseconds (1003 milliseconds).
+	at test.TestSicred.t01_shouldGetUsers(TestSicred.java:32)
+
+test.TestSicred.t02_shouldLogin  Time elapsed: 2.241 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <200>.
+
+	at test.TestSicred.t02_shouldLogin(TestSicred.java:55)
+

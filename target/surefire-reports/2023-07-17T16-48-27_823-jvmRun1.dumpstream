@@ -1,0 +1,6 @@
+# Created at 2023-07-17T16:48:28.326
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'Error occurred during initialization of VM'.
+
+# Created at 2023-07-17T16:48:28.328
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'agent library failed to init: instrument'.
+

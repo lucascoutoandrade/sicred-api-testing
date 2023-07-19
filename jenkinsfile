@@ -1,0 +1,36 @@
+pipeline {
+      agent any
+         tools {
+            maven 'maven'
+        }
+
+    
+     stages{
+
+       
+
+        stage('Run test API with RestAssured') {
+             steps{
+                   git credentialsId:'github_login' ,url:'https://github.com/RodrigoQA/sicred-integration-tests-api'
+                    sh 'mvn clean test"'
+
+                  }
+             }
+ 
+           
+               post {
+                             // If Maven was able to run the tests, even if some of the test
+                             // failed, record the test results and archive the jar file.
+                             success { allure([
+                                 includeProperties: false,
+                                 jdk: '17',
+                                 properties: [],
+                                 reportBuildPolicy: 'ALWAYS',
+                                 results: [[path: 'allure-results']]
+                             ])
+                         }
+                    }
+               }
+
+        }
+    
