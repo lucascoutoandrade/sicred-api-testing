@@ -44,7 +44,6 @@ public class BaseTest implements Constantes {
 	public TestName name = new TestName();
 	
 	
-	
 	@BeforeClass
 	public static void setup() {
 		
